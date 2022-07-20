@@ -56,6 +56,10 @@ main{
   transform-style: preserve-3d;
   cursor: pointer;
   height: 600px;
+  -webkit-tap-highlight-color: transparent;
+    outline: none;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
 }
 .card.active{
   transform: rotateY(180deg);

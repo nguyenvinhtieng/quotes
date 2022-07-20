@@ -11,7 +11,7 @@ card.addEventListener("click", () => {
 });
 
 // set height
-let height = cardBefore.offsetHeight;
+let height = cardBefore.offsetHeight + 48;
 cardAfter.style.height = height + "px";
 card.style.height = height + "px";
 
