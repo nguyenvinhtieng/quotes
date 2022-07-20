@@ -1,0 +1,143 @@
+html {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+input,
+textarea,
+select,
+button {
+    outline: none;
+}
+
+input {
+    line-height: normal;
+}
+
+label,
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+body{
+  font-family: 'Manrope', sans-serif;
+}
+main{
+  width: 100%;
+  height: 100vh;
+  background-color: #1f2631;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card{
+  max-width: 400px;
+  width: 96%;
+  position: relative;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  height: 600px;
+}
+.card.active{
+  transform: rotateY(180deg);
+}
+.card__before, .card__after{
+  position: absolute;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.card__before{
+  border-radius: 16px;
+  background-color: #303a48;
+  padding: 32px 32px 60px 32px;
+  width: 100%;
+  position: absolute;
+}
+.card__after{
+  position: absolute;
+  transform: rotateY(180deg);
+  background-color: #303a48;
+  padding: 24px;
+  border-radius: 16px;
+}
+.card__img{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.card__img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card__count{
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 800;
+  color: #00f4a7;
+  letter-spacing: 0.2em;
+  margin-bottom: 16px;
+}
+.card__quote{
+  text-align: center;
+  font-size: 24px;
+  font-weight: 800;
+  color: #cce4e8;
+  margin-bottom: 24px;
+  position: relative;
+}
+.card__line{
+  height: 1px;
+  width: 100%;
+  position: relative;
+  background-color: #cce4e8;
+}
+.card__ico{
+  width: 40px;
+  height: 40px;
+  background-color: #303a48;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #cce4e8;
+  font-size: 24px;
+}
+.card__bottom{
+  width: 60px;
+  height: 60px;
+  background-color: hsl(150, 100%, 66%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100rem;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
